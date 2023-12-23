@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            height: 100vh;
+            display: flex;
+        }
+
+        .section1,
+        .section2 {
+            width: 50%;
+        }
+
+        /* .section1 {
+            background-color: #b5b255;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        .section1 {
+            /* position: fixed; */
+            background-color: #e4db88;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* overflow: hidden;  */ /* hide scrollbar in section1 */
+        }
+
+        .section1 img {
+            width: 80%;
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .section2 {
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent; 
+        }
+
+        /* For Webkit browsers (Chrome, Safari) */
+        .section2::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .section2::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+
+        .section2::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #2d5fb5;
+            color: #fff;
+            padding: 10px 15px;
+            width: 26em; /* Set the width to your desired length */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        /* nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        } */
+
+    </style>
+</head>
+<body>
+
+    <!-- <nav>
+        <a href="/">About Me</a>
+        <a href="application.html">Application Form</a>
+    </nav> -->
+
+    <div class="container">
+        <!-- <nav>
+            <a href="/">About Me</a>
+            <a href="application.html">Application Form</a>
+        </nav> -->
+
+        <div class="section1">
+            <h2 style="font-size: 3em;">Learn highly sought-after skills without hassle.</h2>
+            <p>Earn a Diploma in highly-sought after skills.</p>
+            <p>©2023 AltSchool Africa. All rights reserved.</p>
+        </div>
+
+        <div class="section2">
+            <h2>Application Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" placeholder="mm/dd/yyyy" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education Level</label>
+                    <select id="education" name="education" required>
+                        <option value="" disabled selected>Select level of education</option>
+                        <option value="highSchool">High School</option>
+                        <option value="college">College</option>
+                        <option value="university">University</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <!-- Add your country options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">State/City of Residence</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="employment">Employment Status</label>
+                    <select id="employment" name="employment" required>
+                        <option value="" disabled selected>Select employment status</option>
+                        <option value="employed">Employed</option>
+                        <option value="unemployed">Unemployed</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="school">Choose School</label>
+                    <select id="school" name="school" required>
+                        <!-- Add your school options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Choose Course of Study</label>
+                    <select id="course" name="course" required>
+                        <!-- Add your course options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="howDidYouHear">How did you hear about us?</label>
+                    <select id="howDidYouHear" name="howDidYouHear" required>
+                        <option value="" disabled selected>Select channel</option>
+                        <!-- Add your channels/options here -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="discountCode">Scholarship/Discount Code (optional)</label>
+                    <input type="text" id="discountCode" name="discountCode">
+                </div>
+
+                <div class="form-group">
+                    <label for="agree">By clicking continue, I agree to Terms of Use and acknowledge that I have read the Privacy Policy.</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS'; font-size: 17px;">
+                        Proceed
+                    </button>
+                </div>
+            </form>
+
+            <p>Already have an account? <a href="#">Sign In</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
+
